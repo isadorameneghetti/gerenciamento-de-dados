@@ -17,7 +17,7 @@ typedef struct {
 Record database[MAX_RECORDS];
 int record_count = 0;
 
-// Função para criar um novo registro
+// Funcao para criar um novo registro
 void create_record(int id, const char* name, const char* email) {
     if (record_count < MAX_RECORDS) {
         database[record_count].id = id;
@@ -30,7 +30,7 @@ void create_record(int id, const char* name, const char* email) {
     }
 }
 
-// Função para ler registros
+// Funcao para ler registros
 void read_records() {
     if (record_count == 0) {
         printf("Nenhum registro encontrado.\n");
@@ -42,20 +42,20 @@ void read_records() {
     }
 }
 
-// Função para atualizar um registro
+// Funcao para atualizar um registro
 void update_record(int id, const char* new_name, const char* new_email) {
     for (int i = 0; i < record_count; i++) {
         if (database[i].id == id) {
             strcpy(database[i].name, new_name);
             strcpy(database[i].email, new_email);
             printf("Registro atualizado com sucesso!\n");
-            return; // Sai da função após a atualização
+            return; // Sai da funcao após a atualizacao
         }
     }
-    printf("Erro: Registro não encontrado.\n");
+    printf("Erro: Registro nao encontrado.\n");
 }
 
-// Função para excluir um registro
+// Funcao para excluir um registro
 void delete_record(int id) {
     for (int i = 0; i < record_count; i++) {
         if (database[i].id == id) {
@@ -63,14 +63,14 @@ void delete_record(int id) {
                 database[j] = database[j + 1];
             }
             record_count--;
-            printf("Registro excluído com sucesso!\n");
+            printf("Registro excluido com sucesso!\n");
             return;
         }
     }
-    printf("Erro: Registro não encontrado.\n");
+    printf("Erro: Registro nao encontrado.\n");
 }
 
-// Função principal
+// Funcao principal
 int main() {
     int choice, id;
     char name[MAX_LENGTH], email[MAX_LENGTH];
@@ -82,7 +82,7 @@ int main() {
         printf("3. Atualizar Registro\n");
         printf("4. Excluir Registro\n");
         printf("5. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &choice);
 
         switch (choice) {
@@ -108,7 +108,7 @@ int main() {
                 update_record(id, name, email);
                 break;
             case 4:
-                printf("Digite ID do registro a ser excluído: ");
+                printf("Digite ID do registro a ser excluido: ");
                 scanf("%d", &id);
                 delete_record(id);
                 break;
@@ -116,7 +116,7 @@ int main() {
                 printf("Saindo do sistema...\n");
                 exit(0);
             default:
-                printf("Opção inválida. Tente novamente.\n");
+                printf("Opcao inválida. Tente novamente.\n");
         }
     }
 
