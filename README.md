@@ -1,7 +1,5 @@
-## 📊 Sistema de Gerenciamento de Banco de Dados em C 📊 
-![Banner](imgs/download.jpeg)
+# Sistema de Gerenciamento de Banco de Dados em C 
 
-# Gerenciamento de Registros
 Este projeto implementa um sistema simples de gerenciamento de banco de dados em C, permitindo criar, ler, atualizar e excluir registros de usuários. O sistema utiliza uma estrutura de dados para armazenar informações sobre usuários, incluindo ID, nome e email.
 
 ### Objetivo
